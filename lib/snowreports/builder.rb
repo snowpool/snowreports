@@ -3,7 +3,7 @@ require 'nokogiri'
 
 module Snowreports
   class Builder
-    def self.build(xml:, snowpool_id:)
+    def self.build(xml:, field_id:)
       parsed = Nokogiri.parse(xml)
       last_updated_date = parsed.xpath("//skiareas/skiarea/date").text
       last_updated_time = parsed.xpath("//skiareas/skiarea/time").text.sub(/:\d+$/,"")
@@ -28,7 +28,7 @@ module Snowreports
                      snow_min: snow_min,
                      snow_base: snow_base,
                      information: information,
-                     snowpool_id: snowpool_id,
+                     field_id: field_id,
                      mountain_status: mountain_status,
                      )
     end

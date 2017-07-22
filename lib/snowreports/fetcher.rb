@@ -15,12 +15,12 @@ module Snowreports
     def self.conn
       @conn ||= begin
         conn = Faraday.new(url: BASE_PATH)
-        user = user || ENV["SNOW_USER"]
-        pass = pass || ENV["SNOW_PASS"]
+        snow_user = user || ENV["SNOW_USER"]
+        snow_pass = pass || ENV["SNOW_PASS"]
 
-        raise "You must supply a username and password for API access" unless user && pass
+        raise "You must supply a username and password for API access" unless snow_user && snow_pass
 
-        conn.basic_auth(user, pass)
+        conn.basic_auth(snow_user, snow_pass)
         conn
       end
     end

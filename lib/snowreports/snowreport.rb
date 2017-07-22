@@ -17,6 +17,6 @@ module Snowreports
     :snow_base,
     :snow_min,
     :information,
-    :snowpool_id
+    :field_id
   )
 end
