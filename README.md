@@ -1,39 +1,21 @@
 # Snowreports
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/snowreports`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'snowreports'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install snowreports
+This gem is a simple wrapper around [snowhq](https://www.snowhq.com/) . It allows pulling in of the snow data and exposes just a few of the fields.
 
 ## Usage
 
-TODO: Write usage instructions here
+1. obtain api credentials from snowhq
 
-## Development
+```ruby
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Snowreports.all
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+#or
 
-## Contributing
+Snowreports.fetch(:turoa)
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/snowreports.
+```
 
-## License
+See [endpoints class](https://github.com/snowpool/snowreports/blob/f3a4787e816d5b6cf80adc0de0f8897d6cf62fdd/lib/snowreports/endpoint.rb#L7-L28) for the various field names you can pass in.
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+PR's welcome.
