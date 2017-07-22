@@ -30,7 +30,7 @@ module Snowreports
                      information: information,
                      snowpool_id: snowpool_id,
                      mountain_status: mountain_status,
-                     parsed: parsed)
+                     )
     end
   end
 end

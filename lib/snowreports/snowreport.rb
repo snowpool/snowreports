@@ -14,7 +14,6 @@ module Snowreports
     :name,
     :id,
     :weather_detail,
-    :parsed,
     :snow_base,
     :snow_min,
     :information,
