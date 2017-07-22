@@ -2,6 +2,9 @@
 
 This gem is a simple wrapper around [snowhq](https://www.snowhq.com/) . It allows pulling in of the snow data and exposes just a few of the fields.
 
+## Installation
+    gem install snowreports
+
 ## Usage
 
 1. obtain api credentials from snowhq
