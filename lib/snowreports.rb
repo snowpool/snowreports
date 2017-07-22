@@ -11,9 +11,10 @@ module Snowreports
   end
 
   def self.all
-    Endpoint.all.first(2).each_with_object([]) do |(_field_name, endpoint), acc|
+    Endpoint.all.each_with_object([]) do |(_field_name, endpoint), acc|
       response = Fetcher.fetch(path: endpoint.path)
       acc << Builder.build(xml: response.body, field_id: endpoint.id)
+      acc
     end
   end
 end
