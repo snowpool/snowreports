@@ -11,6 +11,13 @@ This gem is a simple wrapper around [snowhq](https://www.snowhq.com/) . It allow
 
 ```ruby
 
+# configure it. You can either set a username and password like below
+Snowreports::Fetcher.user = username
+Snowreports::Fetcher.pass = password
+
+# or, ENV["SNOW_USER"] and ENV["SNOW_PASS"] can be used.
+
+
 Snowreports.all
 
 #or
