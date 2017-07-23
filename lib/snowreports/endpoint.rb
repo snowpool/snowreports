@@ -4,7 +4,7 @@ module Snowreports
 
     def self.all
       @all ||= {
-        turoa: SnowpoolWrapper.new(24, "/nz/mt-ruapehu-and-manganui/turoa/turoa-snow-report"),
+        turoa: SnowpoolWrapper.new(22, "/nz/mt-ruapehu-and-manganui/turoa/turoa-snow-report"),
         whakapapa: SnowpoolWrapper.new(21, "/nz/mt-ruapehu-and-manganui/whakapapa/whakapapa-snow-report"),
         cardrona: SnowpoolWrapper.new(15, "/nz/queenstown-and-wanaka/cardrona/cardrona-snow-report"),
         treble_cone: SnowpoolWrapper.new(7, "/nz/queenstown-and-wanaka/treble-cone/treble-cone-snow-report"),
