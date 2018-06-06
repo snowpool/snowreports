@@ -18,6 +18,12 @@ module Snowreports
       snow_base = parsed.xpath("//snow/base").text
       mountain_status = parsed.xpath("//skiarea/status/label").text
 
+      if mountain_status == "Opening On"
+        opening_date = parsed.xpath("//skiarea/status/openingdate").text
+        mountain_status = "Opening On: #{opening_date}"
+      end
+
+
       Snowreport.new(updated_date: last_updated_date,
                      updated_time: last_updated_time,
                      road_status: road_status,
