@@ -26,6 +26,6 @@ Snowreports.fetch(:turoa)
 
 ```
 
-See [endpoints class](https://github.com/snowpool/snowreports/blob/f3a4787e816d5b6cf80adc0de0f8897d6cf62fdd/lib/snowreports/endpoint.rb#L7-L28) for the various field names you can pass in.
+See [endpoints class](https://github.com/snowpool/snowreports/blob/master/lib/snowreports/endpoint.rb) for the various field names you can pass in.
 
 PR's welcome.
