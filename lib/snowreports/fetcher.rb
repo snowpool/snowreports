@@ -21,7 +21,7 @@ module Snowreports
 
         raise "You must supply a username and password for API access" unless snow_user && snow_pass
 
-        conn.basic_auth(snow_user, snow_pass)
+        conn.request :authorization, :basic, snow_user, snow_pass
         conn
       end
     end
