@@ -8,8 +8,9 @@ module Snowreports
       attr_accessor :user, :pass
     end
 
-    def self.fetch(path:)
-      conn.get(path + "/xml")
+    def self.fetch(snowhq_id:)
+      snowhq_path = "/feeds/xml?reportid=#{snowhq_id}"
+      conn.get(snowhq_path)
     end
 
     def self.conn
