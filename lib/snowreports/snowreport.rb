@@ -17,6 +17,11 @@ module Snowreports
     :snow_base,
     :snow_min,
     :information,
-    :field_id
+    :field_id,
+    :raw_data,
+    :mountain_info,
+    :snow_comment,
+    :weather_comment,
+    :last_snowfall_amount
   )
 end

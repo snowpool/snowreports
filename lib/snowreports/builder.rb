@@ -34,8 +34,13 @@ module Snowreports
                      snow_min: snow_min,
                      snow_base: snow_base,
                      information: information,
+                     mountain_info: parsed.at_xpath("//field[@name='mountain-info']")&.content,
+                     snow_comment: parsed.at_xpath("//field[@name='snow-comment']")&.content,
+                     weather_comment: parsed.at_xpath("//field[@name='weather-comment']")&.content,
+                     last_snowfall_amount: parsed.at_xpath("//field[@name='last-snowfall-amount']")&.content,
                      field_id: field_id,
                      mountain_status: mountain_status,
+                     raw_data: parsed
                      )
     end
   end
