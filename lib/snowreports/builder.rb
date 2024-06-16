@@ -14,7 +14,8 @@ module Snowreports
       snowreports_field_id = parsed.xpath("//skiarea/id").text
       snowreports_field_name = parsed.xpath("//skiarea/name").text
       information = parsed.xpath("//information").text
-      snow_min = parsed.xpath("//snow/mindepth").text || parsed.xpath("//fields/field[@name='snow-base-lower']").text
+      snow_min = parsed.xpath("//snow/mindepth").text
+      snow_min = snow_min.empty? ? parsed.xpath("//fields/field[@name='snow-base-lower']").text : snow_min
       snow_base = parsed.xpath("//snow/base").text
       mountain_status = parsed.xpath("//skiarea/status/label").text
 
